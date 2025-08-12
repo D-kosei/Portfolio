@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>作品一覧｜ポートフォリオ</title>
+  <meta name="description" content="制作物の一覧ページ．スクリーンショット・使用技術・リンクを掲載．">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="logo" href="index.html" aria-label="トップへ">TK Doi</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">☰</button>
+    <nav id="global-nav" class="nav">
+      <ul>
+        <li><a href="index.html#profile">プロフィール</a></li>
+        <li><a href="index.html#tagline">キャッチコピー</a></li>
+        <li><a href="index.html#skills">できること</a></li>
+        <li><a href="works.html" class="is-active">作品一覧</a></li>
+        <li><a href="index.html#pr">自己PR</a></li>
+        <li><a href="index.html#career">経歴</a></li>
+        <li><a href="index.html#contact">連絡先</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" aria-label="テーマ切替">🌗</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>作品一覧</h2>
+      <p class="lead">スクリーンショットと使用技術，GitHub／デモへのリンクを掲載しています．新しい順に並んでいます．</p>
+
+      <!-- 簡易フィルタ（任意：不要なら丸ごと削除OK） -->
+      <div class="chips" id="filters" style="margin-top:6px">
+        <button class="chip" data-filter="all" aria-pressed="true">すべて</button>
+        <button class="chip" data-filter="html">HTML/CSS</button>
+        <button class="chip" data-filter="js">JavaScript</button>
+        <button class="chip" data-filter="react">React</button>
+        <button class="chip" data-filter="node">Node.js</button>
+      </div>
+
+      <div class="cards" id="worksGrid" style="margin-top:14px">
+        <!-- 以降，カードを複製して増やす．data-tags で簡易フィルタ可能 -->
+        <article class="card" data-tags="html js">
+          <img src="https://placehold.co/800x500/png?text=Landing+Page"
+               alt="LPサイトのスクリーンショット" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>LP制作テンプレート</h3>
+            <p>軽量なCSSとアクセシビリティに配慮したLPテンプレート．CLS対策済み．</p>
+            <ul class="meta">
+              <li>技術：HTML，CSS，JavaScript</li>
+              <li>役割：設計／実装／最適化</li>
+            </ul>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">デモ</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="js">
+          <img src="https://placehold.co/800x500/png?text=Todo+App"
+               alt="ToDoアプリのスクリーンショット" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>ToDo Webアプリ</h3>
+            <p>ローカルストレージ永続化，キーボード操作対応，コントラスト配慮．</p>
+            <ul class="meta">
+              <li>技術：JavaScript，LocalStorage</li>
+              <li>役割：実装／UI改善</li>
+            </ul>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">デモ</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="react js">
+          <img src="https://placehold.co/800x500/png?text=React+Mini+App"
+               alt="Reactミニアプリのスクリーンショット" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Reactミニアプリ集</h3>
+            <p>フォーム検証，検索フィルタ，ページネーションなどの小さな実装例．</p>
+            <ul class="meta">
+              <li>技術：React，Vite</li>
+              <li>役割：実装</li>
+            </ul>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">デモ</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-tags="node js">
+          <img src="https://placehold.co/800x500/png?text=Node+API"
+               alt="Node APIのスクリーンショット" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>ミニAPI（モック）</h3>
+            <p>フロントの試作用にJSONを返す簡易モックAPI．ローカルで即利用可能．</p>
+            <ul class="meta">
+              <li>技術：Node.js（Express）</li>
+              <li>役割：実装</li>
+            </ul>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">ドキュメント</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ここにどんどん追加してOK -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Takuto Doi．All rights reserved．</small>
+  </footer>
+
+  <a href="#top" class="back-to-top" aria-label="上へ戻る">↑</a>
+
+  <script src="script.js"></script>
+  <script>
+    // 作品タグの簡易フィルタ（必要なければ削除可）
+    const filterWrap = document.getElementById('filters');
+    const grid = document.getElementById('worksGrid');
+    if (filterWrap && grid) {
+      const buttons = Array.from(filterWrap.querySelectorAll('button'));
+      const cards = Array.from(grid.querySelectorAll('.card'));
+      const apply = (key) => {
+        cards.forEach(c => {
+          const tags = (c.getAttribute('data-tags') || '').split(/\s+/);
+          const show = key === 'all' || tags.includes(key);
+          c.style.display = show ? '' : 'none';
+        });
+      };
+      filterWrap.addEventListener('click', (e) => {
+        if (!(e.target instanceof HTMLElement)) return;
+        const btn = e.target.closest('button[data-filter]');
+        if (!btn) return;
+        buttons.forEach(b => b.setAttribute('aria-pressed', 'false'));
+        btn.setAttribute('aria-pressed', 'true');
+        apply(btn.dataset.filter);
+      });
+    }
+  </script>
+</body>
+</html>
