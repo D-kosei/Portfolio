@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ポートフォリオ｜土居 巧惺</title>
+  <meta name="description" content="HTML／CSS／JavaScriptで作る個人ポートフォリオ．できること・制作物・自己PR・経歴・連絡先などを掲載．">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="logo" href="#top" aria-label="トップへ">Portfolio</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く">☰</button>
+    <nav id="global-nav" class="nav">
+      <ul>
+        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#tagline">キャッチコピー</a></li>
+        <li><a href="#skills">できること</a></li>
+        <li><a href="#works">実績・制作物</a></li>
+        <li><a href="#pr">自己PR</a></li>
+        <li><a href="#career">経歴</a></li>
+        <li><a href="#contact">連絡先</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" aria-label="テーマ切替">🌗</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. プロフィール -->
+    <section id="profile" class="section">
+      <h2>プロフィール</h2>
+      <div class="grid two">
+        <div>
+          <p class="lead">HTML／CSS／JavaScriptを中心に扱う，フロントエンド寄りの学生エンジニアです．使う人にとってわかりやすいUIと，読みやすいコードを大切にしています．</p>
+          <ul class="kv">
+            <li><span>名前：</span><strong>土居 巧惺</strong></li>
+            <li><span>年代：</span>20代前半</li>
+            <li><span>拠点：</span>愛知県</li>
+            <li><span>メール：</span><a href="mailto:koseidoi311@gmail">koseidoi311@gmail</a></li>
+          </ul>
+        </div>
+        <div class="avatar-wrap">
+          <img src="images/myPhoto.png" alt="プロフィール画像" class="avatar" loading="lazy" decoding="async"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. キャッチコピー -->
+    <section id="tagline" class="section accent">
+      <h2>キャッチコピー・肩書き</h2>
+      <p class="tagline">「JavaScriptで，アイデアを最速でカタチにするフロントエンドエンジニア」</p>
+      <p class="subtag">LP制作／小規模Webアプリ／UI改善を中心に対応します．</p>
+    </section>
+
+    <!-- 3. できること・スキル -->
+    <section id="skills" class="section">
+      <h2>できること・スキル</h2>
+      <div class="chips">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS（Flex／Grid）</span>
+        <span class="chip">JavaScript（ES6+）</span>
+        <span class="chip">React（基礎）</span>
+        <span class="chip">Node.js（基礎）</span>
+        <span class="chip">Git／GitHub</span>
+        <span class="chip">Figma（ワイヤー）</span>
+        <span class="chip">SEO基礎</span>
+        <span class="chip">アクセシビリティ配慮</span>
+      </div>
+      <h3>提供可能なこと</h3>
+      <ul class="bullet">
+        <li>ランディングページの制作と公開（ドメイン設定／GitHub Pages対応）．</li>
+        <li>小規模なWebアプリの設計と実装（フォーム，バリデーション，簡易API連携など）．</li>
+        <li>既存サイトのUI改良と表示速度改善（画像最適化，CSS整理）．</li>
+      </ul>
+    </section>
+
+    <!-- 4. 実績・制作物 -->
+    <section id="works" class="section">
+      <h2>実績・制作物</h2>
+      <div class="cards">
+        <!-- カードを必要数複製して使う -->
+        <article class="card">
+          <img src="https://placehold.co/800x500/png?text=Project+1" alt="Project 1 のスクリーンショット" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Project 1：ミニポートフォリオ</h3>
+            <p>HTML／CSS／JSのみで作成．軽量なUIとアクセシブルなナビゲーションを重視．</p>
+            <ul class="meta">
+              <li>技術：HTML，CSS，JavaScript</li>
+              <li>役割：設計／実装／デプロイ</li>
+            </ul>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">デモ</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://placehold.co/800x500/png?text=Project+2" alt="Project 2 のスクリーンショット">
+          <div class="card-body">
+            <h3>Project 2：ToDo Webアプリ</h3>
+            <p>ローカルストレージで永続化．キーボード操作とコントラストに配慮．</p>
+            <ul class="meta">
+              <li>技術：JavaScript，LocalStorage</li>
+              <li>役割：実装／UI改善</li>
+            </ul>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">デモ</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. 自己PR -->
+    <section id="pr" class="section accent">
+      <h2>自己PR</h2>
+      <p>要件の言語化と，手戻りを減らすラピッドプロトタイピングを重視します．小さな改善を早く回し，必要十分な品質で納品することを大切にしています．</p>
+      <ul class="bullet">
+        <li>課題の分解と優先順位付けが得意．</li>
+        <li>一定のデザイン調整まで自走可能．</li>
+        <li>コミュニケーションはテキスト中心でも問題なし．</li>
+      </ul>
+    </section>
+
+    <!-- 6. 経歴 -->
+    <section id="career" class="section">
+      <h2>経歴</h2>
+      <ul class="timeline">
+        <li>
+          <time>2025年</time>
+          <div>大学で情報工学を専攻．Webフロントエンドを中心に学習・実装．</div>
+        </li>
+        <li>
+          <time>2024年〜</time>
+          <div>個人開発と受託の下準備を開始．LP制作や小規模アプリの試作を公開．</div>
+        </li>
+      </ul>
+      <h3>資格・活動</h3>
+      <ul class="bullet">
+        <li>（例）基本情報技術者（取得予定）</li>
+        <li>勉強会参加・LT登壇（予定含む）</li>
+      </ul>
+    </section>
+
+    <!-- 7. 連絡先 -->
+    <section id="contact" class="section">
+      <h2>連絡先</h2>
+      <p>ご相談は以下フォームまたはSNSへお願いします．</p>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label>お名前
+          <input type="text" name="name" autocomplete="name" required />
+        </label>
+        <label>メール
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+        <label>内容
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit">送信</button>
+        <p id="formMsg" class="form-msg" aria-live="polite"></p>
+      </form>
+      <div class="socials">
+        <a href="#" aria-label="X">X</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Takuto Doi．All rights reserved．</small>
+  </footer>
+
+  <a href="#top" class="back-to-top" aria-label="上へ戻る">↑</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
