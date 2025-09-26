@@ -110,6 +110,10 @@ img { max-width: 100%; height: auto; }
 .chip { padding: 8px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); box-shadow: 0 2px 10px rgba(0,0,0,.06); }
 .bullet { padding-left: 1.2em; }
 .bullet li { margin: 6px 0; }
+/* 修正 */
+.links__more:visited .chip {
+  color: #60a5fa; /* 訪問済み時の薄めの青 */
+}
 
 /* カード（制作物） */
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--gap); }
